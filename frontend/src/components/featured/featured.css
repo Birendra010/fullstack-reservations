@@ -5,7 +5,30 @@
   justify-content: space-between;
   gap: 20px;
   z-index: 1;
+  display: grid; 
+   grid-template-columns: repeat(3, minmax(18rem, 1fr));
+
 }
+
+
+
+
+
+
+
+
+@media screen and (max-width: 950px) {
+  .featured {
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .featured {
+    grid-template-columns: repeat(1, minmax(10rem, 1fr));
+  }
+}
+
 
 .featuredItem{
   position: relative;
