@@ -3,7 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import "./propertyList.css";
 
 const PropertyList = () => {
-  const { data, loading, error } = useFetch(
+  const { data, loading } = useFetch(
     "http://localhost:8800/api/hotels/countByType"
   );
   const images = [
@@ -16,7 +16,7 @@ const PropertyList = () => {
   return (
     <div className="pList">
       {loading ? (
-        "loading"
+        "loading please wait..."
       ) : (
         <>
           {data &&
@@ -38,4 +38,5 @@ const PropertyList = () => {
 };
 
 export default PropertyList;
+
 

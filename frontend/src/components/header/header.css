@@ -78,7 +78,7 @@
   .headerSearch {
     grid-template-columns: repeat(1, minmax(10rem, 1fr));
     padding: 20px;
-    height: 100%;
+    /* height: 100%; */
    
   }
   
