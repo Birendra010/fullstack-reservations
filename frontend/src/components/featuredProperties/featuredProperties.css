@@ -7,15 +7,22 @@
   /* padding: 10px; */
 }
 
+@media screen and (max-width: 950px) {
+  .fp {
+    grid-template-columns: repeat(3, minmax(15rem, 1fr));
+  }
+}
+
 @media screen and (max-width: 768px) {
   .fp {
-    grid-template-columns: repeat(2, minmax(10rem, 1fr));
+    grid-template-columns: repeat(2, minmax(15rem, 1fr));
   }
 }
 
 @media screen and (max-width: 550px) {
   .fp {
-    grid-template-columns: repeat(1, minmax(10rem, 1fr));
+    grid-template-columns: repeat(1, minmax(15rem, 1fr));
+    width:100%;
   }
 }
 
