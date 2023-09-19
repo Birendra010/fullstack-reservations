@@ -21,6 +21,7 @@
   flex: 2;
 }
 
+
 .siTitle {
   font-size: 20px;
   color: #0071c2;
@@ -47,6 +48,8 @@
 .siFeatures{
   font-size: 12px;
 }
+
+
 
 .siCancelOp{
   font-size: 12px;

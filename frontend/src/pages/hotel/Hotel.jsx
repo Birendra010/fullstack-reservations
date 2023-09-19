@@ -25,7 +25,6 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -52,9 +51,9 @@ const Hotel = () => {
     let newSlideNumber;
 
     if (direction === "l") {
-      newSlideNumber = slideNumber === 0 ? 5 : slideNumber - 1;
+      newSlideNumber = slideNumber === 0 ? data.photos.length-1 : slideNumber - 1;
     } else {
-      newSlideNumber = slideNumber === 5 ? 0 : slideNumber + 1;
+      newSlideNumber = slideNumber === data.photos.length-1 ? 0 : slideNumber + 1;
     }
 
     setSlideNumber(newSlideNumber);
@@ -62,7 +61,6 @@ const Hotel = () => {
   const handleClick = () => {
     if (user) {
       setOpenModal(true);
-
     } else {
       navigate("/login");
     }
@@ -122,7 +120,7 @@ const Hotel = () => {
                   <img
                     onClick={() => handleOpen(i)}
                     src={photo}
-                    alt=""
+                    alt={photo}
                     className="hotelImg"
                   />
                 </div>
@@ -151,7 +149,7 @@ const Hotel = () => {
           <Footer />
         </div>
       )}
-      {openModal && <Reserve setOpen={setOpenModal} hotelId={id} /> }
+      {openModal && <Reserve setOpen={setOpenModal} hotelId={id} />}
     </div>
   );
 };
