@@ -80,29 +80,35 @@ function App() {
             />
           </Route> */}
 
-          <Route path="/">
-            <Route path="login" element={<Login />} />
-            
-            <Route path="users">
-              <Route
-                index
-                element={
-                  <ProtectedRoute>
-                    <List columns={userColumns} />
-                  </ProtectedRoute>
-                }
+
+            <Route path="/login" element={<Login />}></Route>
+
+            <Route
+              path="/users"
+              element={
+                <ProtectedRoute Component={<List columns={userColumns} />} />
+              }
+            ></Route>
+
+          <Route
+            path="/new"
+            element={
+              <ProtectedRoute
+                Component={<New inputs={userInputs} title={"Add New User"} />}
               />
-             
-              <Route
-                path="new"
-                element={
-                  <ProtectedRoute>
-                    <New inputs={userInputs} title="Add New User" />
-                  </ProtectedRoute>
-                }
-              />
-            </Route>
-            <Route path="hotels">
+            }
+          >
+           
+          </Route>
+
+
+
+
+
+
+
+
+            {/* <Route path="hotels">
               <Route
                 index
                 element={
@@ -111,7 +117,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-              
+
               <Route
                 path="new"
                 element={
@@ -130,7 +136,7 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-            
+
               <Route
                 path="new"
                 element={
@@ -139,8 +145,8 @@ function App() {
                   </ProtectedRoute>
                 }
               />
-            </Route>
-          </Route>
+            </Route> */}
+          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </div>
