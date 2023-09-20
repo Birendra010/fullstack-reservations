@@ -1,15 +1,17 @@
 import { useContext, useState } from "react";
 import "./login.css";
-import { AuthContext } from "../../context/AuthContext";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
     username: undefined,
     password: undefined,
   });
-  const {loading, error, dispatch } = useContext(AuthContext);
+  const { loading, error, dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -24,8 +26,17 @@ const Login = () => {
         "http://localhost:8800/api/auth/login",
         credentials
       );
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
-      navigate("/");
+      if (res.data.isAdmin) {
+        dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+
+
+        navigate("/");
+      } else {
+        dispatch({
+          type: "LOGIN_FAILURE",
+          payload: { message: "you are not allowed!" },
+        });
+      }
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
