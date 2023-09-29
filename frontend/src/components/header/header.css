@@ -20,6 +20,7 @@
   margin-bottom: 40px;
   width: 100%;
   overflow: auto;
+  cursor: pointer;
 }
 .headerListItem {
   display: flex;

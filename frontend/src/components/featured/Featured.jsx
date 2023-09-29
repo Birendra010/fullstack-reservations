@@ -1,9 +1,11 @@
 import useFetch from "../../hooks/useFetch";
 import "./featured.css";
 
+
+
 const Featured = () => {
   const { data, loading } = useFetch(
-    "http://localhost:8800/api/hotels/countByCity?cities=berlin,madrid,london"
+    "https://booking-api-pbc2.onrender.com/api/hotels/countByCity?cities=berlin,madrid,london"
   );
 
   return (

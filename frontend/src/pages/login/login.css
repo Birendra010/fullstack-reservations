@@ -1,4 +1,4 @@
-.login {
+/* .login {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -29,4 +29,49 @@
 .lButton:disabled{
   background-color: #0071c28c;
   cursor: not-allowed;
+} */
+
+.sign_container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign_form {
+  border: 1px solid #c9c9c9;
+  padding: 10px 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+/* for login page */
+.create_accountinfo p {
+  font-size: 14px;
+  text-align: center;
+  color: #807c7c;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.create_accountinfo button {
+  height: 29px;
+  width: 300px;
+  background: #162b94;
+  cursor: pointer;
+  border: 1px solid #1727b5;
+  height: 29px;
+  outline: none;
+  border-radius: 3px;
+  color: #e3dbdb;
+  margin-top: 5px;
+  background: linear-gradient(to bottom, #1016c6, #594bf0);
+}
+
+.create_accountinfo a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 35px;
+  letter-spacing: 0.5px;
 }

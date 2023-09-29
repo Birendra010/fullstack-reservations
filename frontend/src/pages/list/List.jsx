@@ -21,7 +21,7 @@ function List() {
   
 
   const { data, loading , reFetch } = useFetch(
-    `http://localhost:8800/api/hotels?city=${destination}&min=${min || 1}&max=${max|| 10000}`
+    `https://booking-api-pbc2.onrender.com/api/hotels?city=${destination}&min=${min || 1}&max=${max|| 10000}`
   );
 
   const handleClick = () => {

@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 .logo {
   font-weight: 500;
@@ -18,7 +19,30 @@
 .navButton {
   margin-left: 20px;
   border: none;
-  padding:  10px 14px ;
+  padding: 10px 14px;
   cursor: pointer;
   color: #003580;
+}
+.Ubutton {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+ 
+}
+
+.user{
+font-weight: 500;
+font-size:large
+}
+.logoutB{
+ margin-left: 10px;
+  border: none;
+  /* padding: 10px 14px; */
+  cursor: pointer;
+  /* color: #003580; */
+  background-color: #003580;
+  color: white;
+  font-weight: 500;
+font-size:large
 }

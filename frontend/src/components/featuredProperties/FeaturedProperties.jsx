@@ -4,7 +4,9 @@ import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch("http://localhost:8800/api/hotels?featured=true&limit=4");
+  const { data, loading } = useFetch(
+    "https://booking-api-pbc2.onrender.com/api/hotels?featured=true&limit=4"
+  );
 
   return (
     <div className="fp">

@@ -4,7 +4,7 @@ import "./propertyList.css";
 
 const PropertyList = () => {
   const { data, loading } = useFetch(
-    "http://localhost:8800/api/hotels/countByType"
+    "https://booking-api-pbc2.onrender.com/api/hotels/countByType"
   );
   const images = [
     "https://cf.bstatic.com/xdata/images/xphoto/square300/57584488.webp?k=bf724e4e9b9b75480bbe7fc675460a089ba6414fe4693b83ea3fdd8e938832a6&o=",

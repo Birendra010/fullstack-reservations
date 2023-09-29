@@ -29,7 +29,7 @@ const Hotel = () => {
   const navigate = useNavigate();
 
   const { data, loading } = useFetch(
-    `http://localhost:8800/api/hotels/find/${id}`
+    `https://booking-api-pbc2.onrender.com/api/hotels/find/${id}`
   );
   const { dates, options } = useContext(SearchContext);
 
