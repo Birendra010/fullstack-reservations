@@ -13,7 +13,7 @@ export const register = async (req, res, next) => {
       password: hash,
     });
     await newUser.save();
-    res.status(201).send("User has been register successfully");
+   return res.status(201).send({ status:true ,message:"User has been register successfully"});
   } catch (err) {
     next(err);
   }
@@ -43,5 +43,15 @@ export const login = async (req, res, next) => {
       .json({details: {...otherDetails} , isAdmin });
   } catch (err) {
     next(err);
+  }
+};
+
+
+export const logout = async (req, res, next) => {
+  try {
+    res.clearCookie("access_token");
+    res.status(200).json("User has been logged out!");
+  } catch (error) {
+    next(error);
   }
 };
