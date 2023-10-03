@@ -31,6 +31,8 @@ const Hotel = () => {
   const { data, loading } = useFetch(
     `https://booking-api-pbc2.onrender.com/api/hotels/find/${id}`
   );
+
+  
   const { dates, options } = useContext(SearchContext);
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;

@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleSignOut = async () => {
     dispatch({ type: "LOGOUT_START" });
     try {
-      await axios.get("http://localhost:8800/api/auth/logout");
+      await axios.get("https://booking-api-pbc2.onrender.com/api/auth/logout");
 
       dispatch({ type: "LOGOUT_SUCCESS" });
       navigate("/")

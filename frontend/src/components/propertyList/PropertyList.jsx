@@ -1,8 +1,14 @@
-
 import useFetch from "../../hooks/useFetch";
 import "./propertyList.css";
 
 const PropertyList = () => {
+
+  
+
+
+
+
+
   const { data, loading } = useFetch(
     "https://booking-api-pbc2.onrender.com/api/hotels/countByType"
   );
@@ -22,7 +28,12 @@ const PropertyList = () => {
           {data &&
             images.map((img, i) => (
               <div className="pListItem" key={i}>
-                <img src={img} alt="" className="pListImg" />
+                <img
+                  src={img}
+                  alt=""
+                  className="pListImg"
+                
+                />
                 <div className="pListTitles">
                   <h1>{data[i]?.type}</h1>
                   <h2>
@@ -38,5 +49,3 @@ const PropertyList = () => {
 };
 
 export default PropertyList;
-
-

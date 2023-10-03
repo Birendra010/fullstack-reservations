@@ -49,6 +49,7 @@ const Header = ({ type }) => {
   };
 
 
+
   const {dispatch} = useContext(SearchContext)
 
   const handleSearch = () => {
@@ -213,4 +214,4 @@ const Header = ({ type }) => {
   );
 };
 
-export default Header;
+export default  Header;
