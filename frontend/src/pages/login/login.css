@@ -1,35 +1,4 @@
-/* .login {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.lContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.lInput{
-  height: 30px;
-  padding: 10px;
-}
-
-.lButton {
-  border: none;
-  padding: 10px 20px;
-  background-color: #0071c2;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.lButton:disabled{
-  background-color: #0071c28c;
-  cursor: not-allowed;
-} */
 
 .sign_container {
   width: 85%;
@@ -44,6 +13,15 @@
   padding: 10px 30px;
   margin-top: 30px;
   border-radius: 5px;
+  /* font-size: 14px; */
+}
+
+#label {
+  font-size: 17px;
+  font-weight: 100;
+  margin-bottom: 1px;
+  color: rgb(72, 72, 72);
+
 }
 
 /* for login page */
@@ -74,4 +52,15 @@
   color: white;
   padding: 10px 35px;
   letter-spacing: 0.5px;
+}
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  margin-left: 47px;
 }
