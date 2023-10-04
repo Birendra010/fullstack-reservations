@@ -1,13 +1,14 @@
 import useFetch from "../../hooks/useFetch";
 import "./propertyList.css";
+import { useNavigate } from "react-router-dom";
 
 const PropertyList = () => {
 
-  
+const navigate = useNavigate()
 
-
-
-
+  const handleSearch = () => {
+    navigate("/allHotels");
+  }
 
   const { data, loading } = useFetch(
     "https://booking-api-pbc2.onrender.com/api/hotels/countByType"
@@ -32,6 +33,7 @@ const PropertyList = () => {
                   src={img}
                   alt=""
                   className="pListImg"
+                  onClick={handleSearch}
                 
                 />
                 <div className="pListTitles">

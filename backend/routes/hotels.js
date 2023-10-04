@@ -9,6 +9,7 @@ import {
   getHotelRooms,
   getHotels,
   updateHotel,
+  getHotelByCityName
 } from "../controllers/hotelController.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 
@@ -29,6 +30,11 @@ router.get("/find/:id", getHotel);
 
 //GETALL
 router.get("/", getHotels);
+
+// get
+router.get("/city", getHotelByCityName);
+
+
 
 router.get("/countByCity", countByCity);
 router.get("/countByType", countByType);

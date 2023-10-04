@@ -23,3 +23,13 @@ localhost:8800/api/hotels
     "rating":4
 }
 
+
+### live url 
+liveLink :- https://fullstack-reservations.vercel.app/
+
+
+
+
+
+
+
